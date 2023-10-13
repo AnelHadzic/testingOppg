@@ -159,6 +159,12 @@ describe("Testing API", () => {
     const passwordValue = "Test123!";
     fireEvent.change(passordInput, { target: { value: passwordValue } });
 
+    const confirmPwInput = screen.getByTestId(
+      "confirm_passord"
+    ) as HTMLInputElement;
+    const confirmValue = "Test123!";
+    fireEvent.change(confirmPwInput, { target: { value: confirmValue } });
+
     const submitButton = screen.getByTestId("submit_button");
 
     fireEvent.click(submitButton);
